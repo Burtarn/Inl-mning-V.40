@@ -108,87 +108,62 @@ article {
 
 }
 
-
-.container {
+/* Stilar för flexbox-container */
+.flex-container {
     display: flex;
-    flex-direction: row; 
-    justify-content: space-around; 
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: var(--thirdcolor);
+    justify-content: space-around; /* Jämnt mellanrum mellan rutorna */
+    flex-wrap: wrap; /* Gör att rutorna radbryts om utrymmet är för litet */
+    padding: 20px;
+    gap: 20px; /* Mellanrum mellan rutorna */
 }
 
-
-.Box1   {
-    background-color: brown;
-    padding: 200px;
-    margin: 15px;
-    border: solid black;
+/* Stilar för varje box */
+.box {
+    flex: 1 1 22%; /* Rutorna tar upp 22% av bredden på större skärmar */
+    border: 2px solid #ccc;
+    padding: 10px;
     text-align: center;
-    border-radius: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.box img {
+    width: 100%; /* Gör att bilderna anpassas till boxens bredd */
+    height: auto; /* Bibehåller bildens proportioner */
+    object-fit: cover; /* Gör att bilderna täcker utrymmet utan att förvrängas */
+    max-height: 200px; /* Sätter en maxhöjd för att hålla layouten jämn */
+}
+
+.box p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Gör att rutorna zoomas in något när man hovrar över dem */
+.box:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    text-align: center;
+
 }
 
 
 
 
 
-.Box2  {
-    background-color: blue;
-    padding: 200px;
-    margin: 15px;
-    border: solid black;
-    border-radius: 20px;
-
-}
-
-.Box3 {
-    background-color: brown;
-    padding: 200px;
-    margin: 20px;
-    border: solid black;
-    border-radius: 20px;
-
-
-
-}
-
-.Box4  {
-    background-color: blue;
-    padding: 200px;
-    margin: 20px;
-    border: solid black;
-    border-radius: 20px;
-
-
-}
-
-.Box5  {
-    background-color: brown;
-    padding: 200px;
-    margin: 15px;
-    border: solid black;
-    border-radius: 20px;
-    
-    
-}
-
-.Box6   {
-    background-color: blue;
-    padding: 200px;
-    margin: 15px;
-    border: solid black;
-    border-radius: 20px;
-
-}
-
-
-
+/* Anpassar layouten för mindre skärmar */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Byt till kolumnlayout på mindre skärmar */
-        justify-content: center; /* Centrera boxarna */
-        align-items: center; /* Centrera boxarna vertikalt */
+    .box {
+        flex: 1 1 45%; /* Rutorna tar upp 45% av bredden på medelstora skärmar */
     }
+}
 
-
+@media (max-width: 600px) {
+    .box {
+        flex: 1 1 100%; /* Varje ruta tar upp 100% av bredden på små skärmar */
+    }
 }
