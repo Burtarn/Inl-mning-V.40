@@ -1,0 +1,212 @@
+:root {
+    --firstcolor: #000000;
+    --secondcolor: #5D3FD3;
+    --thirdcolor: #4B4B4B;
+    --fourthcolor: #F0F0F0;
+
+
+
+}
+
+webbkit-scrollbar {
+    width: 1px;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--thirdcolor);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header stil */
+header {
+    background-color: var(--firstcolor);
+    color: white;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    background-image: url(https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg);
+    background-size: cover; /* Gör att bilden täcker hela headern */
+    background-position: center; /* Centrerar bilden i headern */
+    background-repeat: no-repeat; /* Förhindrar att bilden upprepas */
+    height: 300px; /* Ange en höjd för din header, så att bilden syns ordentligt */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main stil */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer stil */
+footer {
+    background-color: var(--firstcolor);
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .social-media a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(25, 1fr);
+    grid-template-areas:"nav nav nav nav nav nav"
+                        "box1 box1 box1 box2 box2 box2"
+                        "box1 box1 box1 box2 box2 box2"
+                        "box1 box1 box1 box2 box2 box2"
+                        "box1 box1 box1 box2 box2 box2"
+                        "box1 box1 box1 box2 box2 box2"
+                        "box1 box1 box1 box2 box2 box2"
+                        "splitOne splitOne splitOne splitOne splitOne splitOne"
+                        "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
+                        "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
+                        "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
+                        "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
+                        "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
+                        "imgThree imgThree imgThree imgFour imgFour imgFour"
+                        "imgThree imgThree imgThree imgFour imgFour imgFour"
+                        "imgThree imgThree imgThree imgFour imgFour imgFour"
+                        "imgThree imgThree imgThree imgFour imgFour imgFour"
+                        "imgThree imgThree imgThree imgFour imgFour imgFour"
+                        "splitTwo splitTwo splitTwo splitTwo splitTwo splitTwo"
+                        "box3 box3 box3 box4 box4 box4"
+                        "box3 box3 box3 box4 box4 box4"
+                        "box3 box3 box3 box4 box4 box4"
+                        "box3 box3 box3 box4 box4 box4"
+                        "box3 box3 box3 box4 box4 box4";
+
+    grid-gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    height: 200vh;
+
+}
+
+
+.nav {
+    grid-area: nav;
+    background-color: lightblue;
+
+
+}
+
+.box1 {
+    grid-area: box1;
+    background-color: lightgoldenrodyellow;
+
+
+}
+
+.box2 {
+    grid-area: box2;
+    background-color: lightsalmon
+
+
+}
+
+
+.box3 {
+    grid-area: box3;
+    background-color: lightgrey;
+
+
+}
+
+.box4 {
+    grid-area: box4;
+    background-color: lightgreen;
+
+
+}
+
+.splitOne {
+    grid-area: splitOne;
+    background-color: lightcoral;
+
+}
+
+
+.splitTwo {
+    grid-area: splitTwo;
+    background-color: lightsalmon;
+
+}
+
+
+#imgOne {
+    grid-area: imgOne;
+    background-color: lightcoral;
+
+}
+
+#imgTwo {
+    grid-area: imgTwo;
+    background-color: lightcyan;
+
+}
+
+#imgThree {
+    grid-area: imgThree;
+    background-color: lightcyan;
+
+}
+
+#imgFour {
+    grid-area: imgFour;
+    background-color: lightseagreen;
+
+}
