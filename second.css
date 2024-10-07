@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: var(--thirdcolor);
     color: #333;
     line-height: 1.6;
 }
@@ -28,6 +28,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    background-image: url(https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg);
+    background-size: cover; /* Gör att bilden täcker hela headern */
+    background-position: center; /* Centrerar bilden i headern */
+    background-repeat: no-repeat; /* Förhindrar att bilden upprepas */
+    height: 300px; /* Ange en höjd för din header, så att bilden syns ordentligt */
 }
 
 header .logo {
@@ -84,4 +90,105 @@ footer .social-media a {
 
 footer .social-media a:hover {
     text-decoration: underline;
+}
+
+
+main {
+    padding: 30px;
+    margin: 10px;
+    background-color: var(--thirdcolor)
+}
+
+
+
+article {
+    padding: 15px;
+    margin: 15px;
+
+
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--thirdcolor);
+}
+
+
+.Box1   {
+    background-color: brown;
+    padding: 200px;
+    margin: 15px;
+    border: solid black;
+    text-align: center;
+    border-radius: 20px;
+}
+
+
+
+
+
+.Box2  {
+    background-color: blue;
+    padding: 200px;
+    margin: 15px;
+    border: solid black;
+    border-radius: 20px;
+
+}
+
+.Box3 {
+    background-color: brown;
+    padding: 200px;
+    margin: 20px;
+    border: solid black;
+    border-radius: 20px;
+
+
+
+}
+
+.Box4  {
+    background-color: blue;
+    padding: 200px;
+    margin: 20px;
+    border: solid black;
+    border-radius: 20px;
+
+
+}
+
+.Box5  {
+    background-color: brown;
+    padding: 200px;
+    margin: 15px;
+    border: solid black;
+    border-radius: 20px;
+    
+    
+}
+
+.Box6   {
+    background-color: blue;
+    padding: 200px;
+    margin: 15px;
+    border: solid black;
+    border-radius: 20px;
+
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Byt till kolumnlayout på mindre skärmar */
+        justify-content: center; /* Centrera boxarna */
+        align-items: center; /* Centrera boxarna vertikalt */
+    }
+
+
 }

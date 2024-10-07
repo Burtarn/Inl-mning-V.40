@@ -1,0 +1,112 @@
+:root {
+    --firstcolor: #000000;
+    --secondcolor: #5D3FD3;
+    --thirdcolor: #4B4B4B;
+    --fourthcolor: #F0F0F0;
+
+
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--thirdcolor);
+    color: #333;
+    line-height: 1.6;
+}
+
+
+    header {
+        background-color: var(--firstcolor);
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; /* Se till att headern sträcker sig över hela bredden */
+        position: relative; /* För att eventuellt justera placeringen av bakgrundsbilden */
+        
+        background-image: url(https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 300px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+header .logo {
+    font-size: clamp(1px, 5vw, 20px);
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main stil */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer stil */
+footer {
+    background-color: var(--firstcolor);
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .social-media a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+
+main {
+    padding: 30px;
+    margin: 10px;
+    background-color: var(--thirdcolor)
+}
+
+
+
+article {
+    padding: 15px;
+    margin: 15px;
+
+
+}
+
