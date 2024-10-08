@@ -68,6 +68,40 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Menyknappens stil */
+.menu-toggle {
+    display: none; /* Döljer menyknappen som standard */
+}
+
+/* Skapa en menyikon för att öppna menyn */
+.menu-icon {
+    cursor: pointer;
+    display: none; /* Döljer menyikonen i desktopvyn */
+    flex-direction: column;
+}
+
+.menu-icon .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+
+    .menu-toggle {
+        display: none;
+    }
+    
+    
+    /* När checkboxen är ikryssad, visa menyn */
+    .menu-toggle:checked + label + nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--firstcolor);
+        width: 100%;
+    }
+
 
 main {
     padding: 20px;
@@ -223,25 +257,6 @@ footer .social-media a:hover {
 }
 
 
-/* Menyknappens stil */
-.menu-toggle {
-    display: none; /* Döljer menyknappen som standard */
-}
-
-/* Skapa en menyikon för att öppna menyn */
-.menu-icon {
-    cursor: pointer;
-    display: none; /* Döljer menyikonen i desktopvyn */
-    flex-direction: column;
-}
-
-.menu-icon .bar {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 3px 0;
-}
-
 
 h2 {
     text-align: center;
@@ -249,6 +264,7 @@ h2 {
     color: #F0F0F0;
 
 }
+
 
 
 
@@ -280,7 +296,6 @@ h2 {
         display: flex; /* Visar menyikonen i mobilvyn */
     }
 }
-
 
 @media (max-width: 768px) {
     .grid-container {
