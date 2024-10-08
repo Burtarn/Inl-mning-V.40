@@ -8,10 +8,24 @@
 
 }
 
-webbkit-scrollbar {
-    width: 1px;
-
-}
+::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
 
 
 * {
@@ -45,8 +59,9 @@ header {
 }
 
 header .logo {
-    font-size: clamp(1rem, 10vw, 2rem);
+    font-size: clamp(1rem, 3vw, 2rem);
     font-weight: bold;
+    color: var(--thirdcolor);
 }
 
 header nav ul {
@@ -138,7 +153,7 @@ footer .social-media a:hover {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(25, 1fr);
+    grid-template-rows: repeat(23, 1fr);
     grid-template-areas:"nav nav nav nav nav nav"
                         "box1 box1 box1 box2 box2 box2"
                         "box1 box1 box1 box2 box2 box2"
@@ -151,8 +166,6 @@ footer .social-media a:hover {
                         "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
                         "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
                         "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
-                        "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
-                        "imgThree imgThree imgThree imgFour imgFour imgFour"
                         "imgThree imgThree imgThree imgFour imgFour imgFour"
                         "imgThree imgThree imgThree imgFour imgFour imgFour"
                         "imgThree imgThree imgThree imgFour imgFour imgFour"
@@ -181,92 +194,152 @@ footer .social-media a:hover {
 
 .box1 {
     grid-area: box1;
-    background-color: lightgoldenrodyellow;
+    background-color: var(--fourthcolor);
     border-radius: 30px;
-
-
+    padding: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+    
 }
 
 .box2 {
     grid-area: box2;
-    background-color: lightsalmon;
+    background-color: var(--fourthcolor);
     border-radius: 30px;
-
-
+    padding: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 
 .box3 {
     grid-area: box3;
-    background-color: lightgrey;
+    background-color: var(--fourthcolor);
     border-radius: 30px;
-
-
+    padding: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 .box4 {
     grid-area: box4;
-    background-color: lightgreen;
+    background-color: var(--fourthcolor);
     border-radius: 30px;
-
-
+    padding: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 .splitOne {
     grid-area: splitOne;
-    background-color: lightcoral;
+    background-color: var(--fourthcolor);
     border-radius: 30px;
-
+    padding: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 
 .splitTwo {
     grid-area: splitTwo;
-    background-color: lightsalmon;
+    background-color: var(--fourthcolor);
     border-radius: 30px;
+    padding: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
 
 }
 
 
 #imgOne {
     grid-area: imgOne;
-    background-color: lightcoral;
+    background-color: var(--fourthcolor);
     border-radius: 30px;
+    padding: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
 
+    background-image: url('https://cdn.prod.website-files.com/5e7e506ed2e43c816a1a5025/65421e276d085e5c4775db89_mike-swigunski-k9Zeq6EH_bk-unsplash.jpg');
+    background-size: cover; /* Så att bilden täcker hela boxen */
+    background-position: center; /* Centrerar bilden i boxen */
 }
 
 #imgTwo {
     grid-area: imgTwo;
-    background-color: lightcyan;
+    background-color: var(--fourthcolor);
     border-radius: 30px;
+    padding: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
 
+    background-image: url('https://www.pandotrip.com/wp-content/uploads/2013/08/1D110-Bertrand-Monney.jpg');
+    background-size: cover; /* Så att bilden täcker hela boxen */
+    background-position: center; /* Centrerar bilden i boxen */
 }
 
 #imgThree {
     grid-area: imgThree;
-    background-color: lightcyan;
+    background-color: var(--fourthcolor);
     border-radius: 30px;
+    padding: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
 
+    background-image: url('https://img.etimg.com/thumb/msid-93504219,width-650,height-488,imgsize-145174,resizemode-75/japan.jpg');
+    background-size: cover; /* Så att bilden täcker hela boxen */
+    background-position: center; /* Centrerar bilden i boxen */
 }
 
 #imgFour {
     grid-area: imgFour;
-    background-color: lightseagreen;
+    background-color: var(--fourthcolor);
     border-radius: 30px;
+    padding: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
 
+    
+    background-image: url('https://www.skanetur.se/wp-content/uploads/sites/136/2020/08/iceland-David-Mark.jpg');
+    background-size: cover; /* Så att bilden täcker hela boxen */
+    background-position: center; /* Centrerar bilden i boxen */
 }
+
 
 
 
 h2 {
     text-align: center;
-    font-size: clamp(1rem, 10vw, 2rem);
+    font-size: clamp(1rem, 5vw, 2rem);
     color: #F0F0F0;
 
 }
 
+h3 {
+    text-align: center;
 
 
+}
+
+h4 {
+    text-align: center;
+    color: var(--thirdcolor);
+    font-size: clamp(1rem, 3vw, 1.2rem);
+
+}
+
+p {
+    font-size: clamp(0.5rem, 2vw, 1rem);
+}
 
 
 
