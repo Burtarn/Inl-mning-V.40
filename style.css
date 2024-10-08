@@ -59,9 +59,9 @@ header {
 }
 
 header .logo {
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1rem, 3vw, 3rem);
     font-weight: bold;
-    color: var(--thirdcolor);
+    color: var(--fourthcolor);
 }
 
 header nav ul {
@@ -147,6 +147,11 @@ footer .social-media a {
 
 footer .social-media a:hover {
     text-decoration: underline;
+}
+
+figure:hover {
+    scale: 1.01;
+
 }
 
 
