@@ -148,13 +148,15 @@ footer .social-media a:hover {
 .box1 {
     grid-area: box1;
     background-color: lightgoldenrodyellow;
+    border-radius: 30px;
 
 
 }
 
 .box2 {
     grid-area: box2;
-    background-color: lightsalmon
+    background-color: lightsalmon;
+    border-radius: 30px;
 
 
 }
@@ -163,6 +165,7 @@ footer .social-media a:hover {
 .box3 {
     grid-area: box3;
     background-color: lightgrey;
+    border-radius: 30px;
 
 
 }
@@ -170,6 +173,7 @@ footer .social-media a:hover {
 .box4 {
     grid-area: box4;
     background-color: lightgreen;
+    border-radius: 30px;
 
 
 }
@@ -177,6 +181,7 @@ footer .social-media a:hover {
 .splitOne {
     grid-area: splitOne;
     background-color: lightcoral;
+    border-radius: 30px;
 
 }
 
@@ -184,6 +189,7 @@ footer .social-media a:hover {
 .splitTwo {
     grid-area: splitTwo;
     background-color: lightsalmon;
+    border-radius: 30px;
 
 }
 
@@ -191,24 +197,28 @@ footer .social-media a:hover {
 #imgOne {
     grid-area: imgOne;
     background-color: lightcoral;
+    border-radius: 30px;
 
 }
 
 #imgTwo {
     grid-area: imgTwo;
     background-color: lightcyan;
+    border-radius: 30px;
 
 }
 
 #imgThree {
     grid-area: imgThree;
     background-color: lightcyan;
+    border-radius: 30px;
 
 }
 
 #imgFour {
     grid-area: imgFour;
     background-color: lightseagreen;
+    border-radius: 30px;
 
 }
 
@@ -278,7 +288,6 @@ h2 {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            "nav"
             "box1"
             "box2"
             "imgOne"
@@ -291,10 +300,15 @@ h2 {
     }
 
 
-    .splitOne, .splitTwo {
+.splitOne, .splitTwo {
         display: none;
 
 
     }
+
+.nav {
+    display: none;
+
+}    
 
 }

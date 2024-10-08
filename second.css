@@ -20,23 +20,26 @@ body {
     line-height: 1.6;
 }
 
-header {
-    background-color: var(--firstcolor);
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    background-image: url(https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg);
-    background-size: cover; /* Gör att bilden täcker hela headern */
-    background-position: center; /* Centrerar bilden i headern */
-    background-repeat: no-repeat; /* Förhindrar att bilden upprepas */
-    height: 300px; /* Ange en höjd för din header, så att bilden syns ordentligt */
-}
-
+    header {
+        background-color: var(--firstcolor);
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; /* Se till att headern sträcker sig över hela bredden */
+        position: relative; /* För att eventuellt justera placeringen av bakgrundsbilden */
+        
+        background-image: url(https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 300px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
 header .logo {
-    font-size: clamp(1rem, 10vw, 2rem);
+    font-size: clamp(1px, 5vw, 20px);
     font-weight: bold;
 }
 
@@ -107,7 +110,6 @@ article {
 
 }
 
-/* Stilar för flexbox-container */
 .flex-container {
     display: flex;
     justify-content: space-around; /* Jämnt mellanrum mellan rutorna */
@@ -125,6 +127,7 @@ article {
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+    border-radius: 30px;
 }
 
 .box img {
@@ -132,6 +135,7 @@ article {
     height: auto; /* Bibehåller bildens proportioner */
     object-fit: cover; /* Gör att bilderna täcker utrymmet utan att förvrängas */
     max-height: 200px; /* Sätter en maxhöjd för att hålla layouten jämn */
+    border-radius: 30px;
 }
 
 .box p {
@@ -164,81 +168,3 @@ article {
     background-color: white;
     margin: 3px 0;
 }
-
-h2 {
-    text-align: center;
-
-}
-
-p {
-    font-size: clamp(1rem, 2.5vw, 2rem);
-
-}
-
-
-@media (max-width: 768px) {
-    .box {
-        flex: 1 1 45%; /* Rutorna tar upp 45% av bredden på medelstora skärmar */
-    }
-}
-
-@media (max-width: 600px) {
-    .box {
-        flex: 1 1 100%; /* Varje ruta tar upp 100% av bredden på små skärmar */
-    }
-}
-
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column; /* Ändrar till kolumnlayout */
-        align-items: center; /* Centrerar innehållet i nav */
-        display: none; /* Döljer menyn som standard */
-        width: 100%; /* Gör menyn lika bred som headern */
-        padding: 10px 0; /* Lägger till lite padding */
-        background-color: var(--firstcolor); /* Samma bakgrund som headern */
-    }
-
-    header nav ul.show {
-        display: flex; /* Visar menyn när den har klassen show */
-    }
-
-    header nav {
-        width: 100%; /* Gör nav lika brett som headern */
-    }
-
-    header .menu-toggle {
-        display: block; /* Visar menyknappen i mobilvyn */
-    }
-
-    header .menu-icon {
-        display: flex; /* Visar menyikonen i mobilvyn */
-    }
-}
-
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column; /* Ändrar till kolumnlayout */
-        align-items: center; /* Centrerar innehållet i nav */
-        display: none; /* Döljer menyn som standard */
-        width: 100%; /* Gör menyn lika bred som headern */
-        padding: 10px 0; /* Lägger till lite padding */
-        background-color: var(--firstcolor); /* Samma bakgrund som headern */
-    }
-
-    header nav ul.show {
-        display: flex; /* Visar menyn när den har klassen show */
-    }
-
-    header nav {
-        width: 100%; /* Gör nav lika brett som headern */
-    }
-
-    header .menu-toggle {
-        display: block; /* Visar menyknappen i mobilvyn */
-    }
-
-    header .menu-icon {
-        display: flex; /* Visar menyikonen i mobilvyn */
-    }
-}
-
