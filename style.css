@@ -45,7 +45,7 @@ header {
 }
 
 header .logo {
-    font-size: 24px;
+    font-size: clamp(1rem, 10vw, 2rem);
     font-weight: bold;
 }
 
@@ -100,6 +100,7 @@ footer .social-media a:hover {
     text-decoration: underline;
 }
 
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -139,7 +140,7 @@ footer .social-media a:hover {
 
 .nav {
     grid-area: nav;
-    background-color: lightblue;
+    background-color: var(--thirdcolor);
 
 
 }
@@ -208,5 +209,92 @@ footer .social-media a:hover {
 #imgFour {
     grid-area: imgFour;
     background-color: lightseagreen;
+
+}
+
+
+/* Menyknappens stil */
+.menu-toggle {
+    display: none; /* Döljer menyknappen som standard */
+}
+
+/* Skapa en menyikon för att öppna menyn */
+.menu-icon {
+    cursor: pointer;
+    display: none; /* Döljer menyikonen i desktopvyn */
+    flex-direction: column;
+}
+
+.menu-icon .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: clamp(1rem, 10vw, 2rem);
+    color: #F0F0F0;
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Ändrar till kolumnlayout */
+        align-items: center; /* Centrerar innehållet i nav */
+        display: none; /* Döljer menyn som standard */
+        width: 100%; /* Gör menyn lika bred som headern */
+        padding: 10px 0; /* Lägger till lite padding */
+        background-color: var(--firstcolor); /* Samma bakgrund som headern */
+    }
+
+    header nav ul.show {
+        display: flex; /* Visar menyn när den har klassen show */
+    }
+
+    header nav {
+        width: 100%; /* Gör nav lika brett som headern */
+    }
+
+    header .menu-toggle {
+        display: block; /* Visar menyknappen i mobilvyn */
+    }
+
+    header .menu-icon {
+        display: flex; /* Visar menyikonen i mobilvyn */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "nav"
+            "box1"
+            "box2"
+            "imgOne"
+            "imgTwo"
+            "box3"
+            "box4"
+            "imgThree"
+            "imgFour";
+        grid-gap: 10px;
+    }
+
+
+    .splitOne, .splitTwo {
+        display: none;
+
+
+    }
 
 }

@@ -45,7 +45,7 @@ header {
 }
 
 header .logo {
-    font-size: 24px;
+    font-size: clamp(1rem, 10vw, 2rem);
     font-weight: bold;
 }
 
