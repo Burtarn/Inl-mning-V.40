@@ -51,10 +51,10 @@ header {
 
 
     background-image: url(https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg);
-    background-size: cover; /* Gör att bilden täcker hela headern */
-    background-position: center; /* Centrerar bilden i headern */
-    background-repeat: no-repeat; /* Förhindrar att bilden upprepas */
-    height: 300px; /* Ange en höjd för din header, så att bilden syns ordentligt */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 300px; 
 }
 
 header .logo {
