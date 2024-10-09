@@ -38,6 +38,13 @@ body {
     color: #333;
     line-height: 1.6;
 }
+
+h2 {
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: var(--fourthcolor)
+
+}
 p {
     font-size: clamp(0.8rem, 2vw, 1.2rem);
 }
