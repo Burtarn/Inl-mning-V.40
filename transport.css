@@ -38,6 +38,10 @@ body {
     color: #333;
     line-height: 1.6;
 }
+p {
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
 
 
 header {
@@ -128,6 +132,12 @@ article {
 
 }
 
+h2 {
+    text-align: center;
+    color: var(--thirdcolor);
+
+}
+
 
 .container-transport {
     display: flex;
@@ -168,11 +178,7 @@ article {
     transform: scale(1.05);
 }
 
-h2 {
-    text-align: center;
-    color: var(--thirdcolor);
 
-}
 
 @media (max-width: 768px) {
     header {
