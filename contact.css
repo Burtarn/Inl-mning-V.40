@@ -198,28 +198,17 @@ h2 {
 }
 
 @media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column; /* Ändrar till kolumnlayout */
-        align-items: center; /* Centrerar innehållet i nav */
-        display: none; /* Döljer menyn som standard */
-        width: 100%; /* Gör menyn lika bred som headern */
-        padding: 10px 0; /* Lägger till lite padding */
-        background-color: var(--firstcolor); /* Samma bakgrund som headern */
+    header {
+        flex-direction: column;
     }
 
-    header nav ul.show {
-        display: flex; /* Visar menyn när den har klassen show */
+    nav {
+        margin-top: 20px;
+        text-align: center;
     }
 
-    header nav {
-        width: 100%; /* Gör nav lika brett som headern */
-    }
-
-    header .menu-toggle {
-        display: block; /* Visar menyknappen i mobilvyn */
-    }
-
-    header .menu-icon {
-        display: flex; /* Visar menyikonen i mobilvyn */
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
     }
 }
