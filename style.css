@@ -12,17 +12,17 @@
         width: 10px;
     }
     
-    /* Track */
+
     ::-webkit-scrollbar-track {
         background: #f1f1f1;
     }
     
-    /* Handle */
+
     ::-webkit-scrollbar-thumb {
         background: #888;
     }
     
-    /* Handle on hover */
+
     ::-webkit-scrollbar-thumb:hover {
         background: #555;
     }
@@ -37,11 +37,11 @@
 
 body {
     background-color: var(--thirdcolor);
-    color: #333;
+    color: var(--firstcolor);
     line-height: 1.6;
 }
 
-/* Header stil */
+
 header {
     background-color: var(--firstcolor);
     color: white;
@@ -52,14 +52,14 @@ header {
 
 
     background-image: url(https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg);
-    background-size: cover; /* Gör att bilden täcker hela headern */
-    background-position: center; /* Centrerar bilden i headern */
-    background-repeat: no-repeat; /* Förhindrar att bilden upprepas */
-    height: 300px; /* Ange en höjd för din header, så att bilden syns ordentligt */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 300px; 
 }
 
 header .logo {
-    font-size: clamp(1rem, 3vw, 3rem);
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
     font-weight: bold;
     color: var(--fourthcolor);
 }
@@ -124,14 +124,14 @@ figure:hover {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(23, 1fr);
-    grid-template-areas:"nav nav nav nav nav nav"
-                        "box1 box1 box1 box2 box2 box2"
+    grid-template-areas:"Split Split Split Split Split Split"
                         "box1 box1 box1 box2 box2 box2"
                         "box1 box1 box1 box2 box2 box2"
                         "box1 box1 box1 box2 box2 box2"
                         "box1 box1 box1 box2 box2 box2"
                         "box1 box1 box1 box2 box2 box2"
                         "splitOne splitOne splitOne splitOne splitOne splitOne"
+                        "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
                         "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
                         "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
                         "imgOne imgOne imgOne imgTwo imgTwo imgTwo"
@@ -150,13 +150,13 @@ figure:hover {
     grid-gap: 10px;
     padding: 10px;
     flex-wrap: wrap;
-    height: 200vh;
+    height: auto;
 
 }
 
 
-.nav {
-    grid-area: nav;
+.Split {
+    grid-area: Split;
     background-color: var(--thirdcolor);
 
 
@@ -237,8 +237,8 @@ figure:hover {
     overflow: hidden;
 
     background-image: url('https://cdn.prod.website-files.com/5e7e506ed2e43c816a1a5025/65421e276d085e5c4775db89_mike-swigunski-k9Zeq6EH_bk-unsplash.jpg');
-    background-size: cover; /* Så att bilden täcker hela boxen */
-    background-position: center; /* Centrerar bilden i boxen */
+    background-size: cover; 
+    background-position: center; 
 }
 
 #imgTwo {
@@ -251,8 +251,8 @@ figure:hover {
     overflow: hidden;
 
     background-image: url('https://www.pandotrip.com/wp-content/uploads/2013/08/1D110-Bertrand-Monney.jpg');
-    background-size: cover; /* Så att bilden täcker hela boxen */
-    background-position: center; /* Centrerar bilden i boxen */
+    background-size: cover; 
+    background-position: center; 
 }
 
 #imgThree {
@@ -265,8 +265,8 @@ figure:hover {
     overflow: hidden;
 
     background-image: url('https://img.etimg.com/thumb/msid-93504219,width-650,height-488,imgsize-145174,resizemode-75/japan.jpg');
-    background-size: cover; /* Så att bilden täcker hela boxen */
-    background-position: center; /* Centrerar bilden i boxen */
+    background-size: cover; 
+    background-position: center; 
 }
 
 #imgFour {
@@ -280,17 +280,33 @@ figure:hover {
 
     
     background-image: url('https://www.skanetur.se/wp-content/uploads/sites/136/2020/08/iceland-David-Mark.jpg');
-    background-size: cover; /* Så att bilden täcker hela boxen */
-    background-position: center; /* Centrerar bilden i boxen */
+    background-size: cover; 
+    background-position: center; 
 }
 
+.buttonOne button {
+    background-color: var(--thirdcolor);
+    color: white;
+    border: none;
+    padding: 8px 20px; 
+    font-size: 16px; 
+    cursor: pointer;
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 
+}
+
+.buttonOne button:hover {
+    background-color: #ff4500;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+}
 
 
 h2 {
     text-align: center;
-    font-size: clamp(1rem, 5vw, 2rem);
-    color: #F0F0F0;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: var(--fourthcolor)
 
 }
 
@@ -303,12 +319,12 @@ h3 {
 h4 {
     text-align: center;
     color: var(--thirdcolor);
-    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
 
 }
 
 p {
-    font-size: clamp(0.5rem, 2vw, 1rem);
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
 }
 
 
@@ -349,15 +365,10 @@ p {
     }
 
 
-.splitOne, .splitTwo {
+.Split, .splitOne, .splitTwo {
         display: none;
 
 
     }
-
-.nav {
-    display: none;
-
-}    
 
 }

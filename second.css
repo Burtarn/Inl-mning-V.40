@@ -12,17 +12,17 @@
     width: 10px;
 }
 
-/* Track */
+
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: #888;
 }
 
-/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
@@ -41,7 +41,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header stil */
 header {
     background-color: var(--firstcolor);
     color: white;
@@ -83,13 +82,13 @@ header nav ul li a:hover {
 }
 
 
-/* Main stil */
+
 main {
     padding: 20px;
     text-align: center;
 }
 
-/* Footer stil */
+
 footer {
     background-color: var(--firstcolor);
     color: white;
@@ -133,15 +132,15 @@ article {
 
 .flex-container {
     display: flex;
-    justify-content: space-around; /* Jämnt mellanrum mellan rutorna */
-    flex-wrap: wrap; /* Gör att rutorna radbryts om utrymmet är för litet */
+    justify-content: space-around; 
+    flex-wrap: wrap; 
     padding: 20px;
-    gap: 20px; /* Mellanrum mellan rutorna */
+    gap: 20px; 
 }
 
-/* Stilar för varje box */
+
 .box {
-    flex: 1 1 22%; /* Rutorna tar upp 22% av bredden på större skärmar */
+    flex: 1 1 22%; 
     border: 2px solid #ccc;
     padding: 10px;
     text-align: center;
@@ -149,14 +148,15 @@ article {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     border-radius: 30px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     
 }
 
 .box img {
-    width: 100%; /* Gör att bilderna anpassas till boxens bredd */
-    height: auto; /* Bibehåller bildens proportioner */
-    object-fit: cover; /* Gör att bilderna täcker utrymmet utan att förvrängas */
-    max-height: 200px; /* Sätter en maxhöjd för att hålla layouten jämn */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+    max-height: 200px; 
     border-radius: 30px;
 }
 
@@ -166,7 +166,7 @@ article {
     color: #333;
 }
 
-/* Gör att rutorna zoomas in något när man hovrar över dem */
+
 .box:hover {
     transform: scale(1.05);
 }
@@ -186,5 +186,16 @@ article {
     .nav-links li {
         display: block;
         margin: 10px 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; 
+    }
+
+    .box {
+        flex: 1 1 auto; 
     }
 }
