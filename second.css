@@ -3,11 +3,11 @@
     --secondcolor: #5D3FD3;
     --thirdcolor: #4B4B4B;
     --fourthcolor: #F0F0F0;
+    --fifthcolor: #ff4500;
 
 
 
 }
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -90,10 +90,10 @@ main {
 
 
 footer {
-    background-color: var(--firstcolor);
+    background-color: var(--fifthcolor);
     color: white;
     padding: 10px 20px;
-    position: fixed;
+    position: inherit;
     width: 100%;
     bottom: 0;
 }
