@@ -94,7 +94,7 @@ footer {
     background-color: var(--fifthcolor);
     color: white;
     padding: 10px 20px;
-    position: inherit;
+    position: fixed;
     width: 100%;
     bottom: 0;
 }
