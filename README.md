@@ -1,7 +1,7 @@
 
 Hej,
 
-Det är inte mkt att fuyndera på egentligen, bara att öppna repot i vscode och köra den via live Server. Sen välja mellan länkarna i NAV-baren eller knapparna på sidan för att ta dig vidare och runt på sidan.
+Det är inte mkt att fundera på egentligen, bara att öppna repot i vscode och köra den via live Server. Sen välja mellan länkarna i NAV-baren eller knapparna på sidan för att ta dig vidare och runt på sidan.
 
 
 
